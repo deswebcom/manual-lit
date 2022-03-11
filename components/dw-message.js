@@ -13,8 +13,17 @@ class DwMessage extends LitElement {
         }
     `;
 
+    static properties = {
+        message: { type: String },
+    }
+
+    constructor() {
+        super();
+        this.message = "Hola Lit!!!"
+    }
+
     render() {
-        return html`<div>Hola Lit</div>`;
+        return html`<div>${this.message}</div>`;
     }
 }
 
