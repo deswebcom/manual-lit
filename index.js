@@ -1,3 +1,2 @@
 import './components/dw-message.js';
-
-console.log('Creando un proyecto Javascript');
+import './components/dw-counter.js';
