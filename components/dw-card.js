@@ -12,7 +12,6 @@ export class DwCard extends LitElement {
                 border-radius: 0.5rem;
             }
             .main {
-                border-bottom: 2px solid #ddd;
                 padding: 0 1rem;
             }
             h2 {
@@ -20,6 +19,7 @@ export class DwCard extends LitElement {
                 font-size: 1.3rem;
             }
             .actions {
+                border-top: 2px solid #ddd;
                 padding: 1rem;
                 text-transform: uppercase;
             }
@@ -49,16 +49,24 @@ export class DwCard extends LitElement {
                     ${this.titleTemplate()}
                     ${this.bodyTemplate()}
                 </section>
-                <section class="actions">
-                    ${this.actionsTemplate()}
-                </section>
+                ${!this.actionUrl || !this.actionLabel
+                    ? ''
+                    : html`
+                        <section class="actions">
+                            ${this.actionsTemplate()}
+                        </section>
+                        `
+                }
             </article>
         `;
     }
 
     titleTemplate() {
         return html`
-            <h2>${this.title}</h2>
+            ${this.title 
+                ? html`<h2>${this.title}</h2>`
+                : ''
+            }
         `
     }
 
