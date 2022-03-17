@@ -1,10 +1,19 @@
 import { LitElement, html, css } from 'lit';
+import './dw-tag';
 
 export class DwTagList extends LitElement {
     static styles = [
         css`
             :host {
                 display: block;
+            }
+            ul {
+                margin: 0; 
+                padding: 0;
+            }
+            li {
+                display: inline;
+                margin-right: 3px;
             }
         `
     ];
@@ -24,7 +33,7 @@ export class DwTagList extends LitElement {
                 ? html`<p>No tenemos tags que mostrar</p>`
                 : html`
                     <ul>
-                        ${this.tags.map( tag => html`<li>${tag}</li>`)}
+                        ${this.tags.map( tag => html`<li><dw-tag name="${tag}"></dw-tag></li>`)}
                     </ul>
                 `
             }
