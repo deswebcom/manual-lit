@@ -9,10 +9,8 @@ export class DwTagList extends LitElement {
         `
     ];
 
-    static get properties() {
-        return {
-            tags: { type: Array },
-        };
+    static properties = {
+        tags: { type: Array },
     }
 
     constructor() {
