@@ -35,6 +35,53 @@ export class DwLoader extends LitElement {
                     height: 12px;
                 }
             }
+            :host([shape="circle"]) .loader div {
+                justify-content: space-around;
+                position: relative;
+            }
+            :host([shape="circle"]) .loader div {
+                margin: 2px;
+                animation: loadercircle 1.8s linear infinite;
+                border-radius: 50%;
+            }
+            :host([shape="circle"]) .loader div:nth-child(3) {
+                animation-delay: 0.6s;
+            }
+            :host([shape="circle"]) .loader div:nth-child(1) {
+                animation-delay: 1.2s;
+            }
+            @keyframes loadercircle {
+                0% {
+                    margin: 1px;
+                    height: 12px;
+                    width: 12px;
+                    left: 1px;
+                }
+                25% {
+                    margin: 0;
+                    height: 20px;
+                    width: 20px;
+                    left: -4px;
+                }
+                50% {
+                    margin: 3px;
+                    height: 2px;
+                    width: 2px;
+                    left: -2px;
+                }
+                75% {
+                    margin: 3px;
+                    height: 16px;
+                    width: 16px;
+                    left: 4px;
+                }
+                100% {
+                    margin: 1px;
+                    height: 12px;
+                    width: 12px;
+                    left: 1px;
+                }
+            }
         `
     ];
 
