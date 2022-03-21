@@ -24,7 +24,24 @@ export class DwTagList extends LitElement {
 
     constructor() {
         super();
-        this.tags = ['Javascript', 'Lit', 'Web Components', 'Custom Elements', 'Array'];
+        this.tags = [
+            {
+                name: 'Javascript',
+                url: 'https://desarrolloweb.com/home/javascript',
+            },
+            {
+                name: 'Lit',
+                url: 'https://desarrolloweb.com/home/litelement',
+            },
+            {
+                name: 'Web Components',
+                url: 'https://desarrolloweb.com/home/web-components',
+            },
+            {
+                name: 'Custom Elements',
+                url: 'https://desarrolloweb.com/articulos/desarrollo-custom-elements-javascript-estandar.html',
+            },
+        ];
     }
 
     render() {
@@ -33,7 +50,7 @@ export class DwTagList extends LitElement {
                 ? html`<p>No tenemos tags que mostrar</p>`
                 : html`
                     <ul>
-                        ${this.tags.map( tag => html`<li><dw-tag name="${tag}"></dw-tag></li>`)}
+                        ${this.tags.map( tag => html`<li><dw-tag .tag="${tag}"></dw-tag></li>`)}
                     </ul>
                 `
             }

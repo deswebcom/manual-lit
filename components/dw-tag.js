@@ -11,18 +11,24 @@ export class DwTag extends LitElement {
                 padding: 0.2rem 0.4rem;
                 border-radius: 0.2rem;
                 background-color: #666;
-                color: #fff;
                 font-weight: bold;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
             }
         `
     ];
 
     static properties = {
-        name: { type: String },
+        tag: { type: Object },
     }
 
     render() {
-        return html`<span>${this.name}</span>`;
+        return html`
+            <span>
+                <a href="${this.tag.url}">${this.tag.name}</a>
+            </span>`;
     }
 }
 customElements.define('dw-tag', DwTag);
