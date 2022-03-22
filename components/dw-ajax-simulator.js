@@ -35,6 +35,7 @@ class DwAjaxSimulator  extends LitElement {
         </span>
         <dw-loader ?active="${this.loading}"></dw-loader>
       </div>
+      <dw-countdown seconds="5" @dw-countdown-finished=${this.simulate}></dw-countdown>
     `;
   }
 
