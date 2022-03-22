@@ -15,7 +15,10 @@ export class DwCountdown extends LitElement {
 
     static properties = {
         seconds: { type: Number },
-        _countdown: { type: Number },
+        _countdown: { 
+            type: Number,
+            state: true
+        },
     }
 
     constructor() {
