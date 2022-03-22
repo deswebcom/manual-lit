@@ -39,6 +39,10 @@ class DwAjaxSimulator  extends LitElement {
     `;
   }
 
+  // onFinished(event) {
+  //   console.log(`La cuenta atrás acabó y se contaron ${event.detail.seconds} segundos.`);
+  // }
+
   simulate() {
     this.loading = true;
     setTimeout(() => {
