@@ -40,7 +40,7 @@ export class DwInputEmail extends LitElement {
     validateInput() {
         let text = this.shadowRoot.getElementById('email').value;
         if( text == '') {
-            this._validationMessage = "Escribe un eami";
+            this.clearMessage();
         } else {
             if(this.validateEmail(text)) {
                 this._validationMessage = "Correcto!";
