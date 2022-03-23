@@ -7,3 +7,4 @@ import './components/dw-tag-list.js';
 import './components/dw-loader.js';
 import './components/dw-ajax-simulator.js';
 import './components/dw-countdown.js';
+import './components/dw-input-email.js';
