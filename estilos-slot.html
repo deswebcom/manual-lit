@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento de estilos en slots</title>
+    <style>
+        p {
+            color: red;
+        }
+        dw-card {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Poner estilos en slots</h1>
+
+    <dw-card title="Mi querida tarjeta">
+        <p>
+            Esto es un contenido que viene <b>vía slot</b>
+        </p>
+        <ul>
+            <li>Elemento de lista</li>
+            <li>Otro elemento</li>
+        </ul>
+        <div>
+            <p>otro párrafo que no es hijo directo</p>
+        </div>
+    </dw-card>
+    
+    <script src="index.js" type="module"></script>
+</body>
+</html>

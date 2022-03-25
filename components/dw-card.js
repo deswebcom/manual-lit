@@ -5,6 +5,7 @@ export class DwCard extends LitElement {
         css`
             :host {
                 display: inline-block;
+                color: blue;
             }
             article {
                 border: 1px solid #ddd;
@@ -30,6 +31,16 @@ export class DwCard extends LitElement {
                 text-decoration: none;
                 color: #35e;
                 letter-spacing: .5px;
+            }
+            ::slotted(*) {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #666;
+            }
+            ::slotted(p) {
+                text-decoration: underline;
+            }
+            ::slotted(ul) {
+                text-transform: uppercase;
             }
         `
     ];
