@@ -9,3 +9,4 @@ import './components/dw-ajax-simulator.js';
 import './components/dw-countdown.js';
 import './components/dw-input-email.js';
 import './components/dw-button.js';
+import './components/dw-menu.js';
