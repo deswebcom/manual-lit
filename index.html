@@ -13,6 +13,9 @@
             --dw-button-hover-background-color: rgb(88, 15, 114);
             --dw-button-hover-text-color: #fff;
         }
+        dw-show-hide h2 {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -21,7 +24,12 @@
     <hr>
     <dw-counter counter="1"></dw-counter>
     <hr>
-    <dw-show-hide></dw-show-hide>
+    <dw-show-hide>
+        <h2 slot="trigger">Qué es Lit</h2>
+        <div slot="content">
+            <p>Es una librería ligera para el desarrollo de custom elements basados en el estándar de Web Components, con alto rendimiento y una experiencia de desarrollo avanzada.</p>
+        </div>
+    </dw-show-hide>
     <hr>
     <dw-age birthday="2002-06-08"></dw-age>
     <dw-age birthday="xxx"></dw-age>
