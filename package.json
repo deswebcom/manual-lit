@@ -13,6 +13,10 @@
     "@web/dev-server": "^0.1.30"
   },
   "dependencies": {
+    "@dile/dile-menu-hamburger": "^1.1.0",
+    "@dile/dile-nav": "^0.1.0",
+    "@dile/dile-pages": "^1.2.0",
+    "@dile/dile-selector": "^0.1.0",
     "lit": "^2.2.0"
   }
 }

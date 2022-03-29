@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <dile-nav menu="right">
+        <div slot="title" class="title">
+            <img src="./images/bombilla.png" alt="Logo">
+            <h1>Luz continua</h1>
+        </div>
+        <dile-menu-hamburger slot="menu" hamburgerAlwaysVisible direction="left">
+            <nav slot="menu">
+                <dile-selector id="selector" selected="home" attrForSelected="name" selectorId="selector">
+                    <dile-selector-item icon="navigate_next" name="home">Home</dile-selector-item>
+                    <dile-selector-item icon="navigate_next" name="users">Users</dile-selector-item>
+                    <dile-selector-item icon="navigate_next" name="contact">Contact</dile-selector-item>
+                </dile-selector>
+            </nav>
+        </dile-menu-hamburger>
+    </dile-nav>
+    
+    <dile-pages selected="home" attrforselected="name" selectorId="selector">
+        <div name="home">
+            <h2>Home</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde excepturi atque, et quaerat vero saepe maiores, maxime dolore officiis earum cumque temporibus tenetur, possimus deserunt magni itaque! Reiciendis, assumenda quo?</p>
+        </div>
+        <div name="users">
+            <h2>Users</h2>
+            <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde excepturi atque, et quaerat vero saepe maiores, maxime dolore officiis earum cumque temporibus tenetur, possimus deserunt magni itaque! Reiciendis, assumenda quo?</p>
+        </div>
+        <div name="contact">
+            <h2>Contact</h2>
+            <p>Just another page</p>
+        </div>
+    </dile-pages>
+
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
