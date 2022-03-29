@@ -10,3 +10,5 @@ import './components/dw-countdown.js';
 import './components/dw-input-email.js';
 import './components/dw-button.js';
 import './components/dw-menu.js';
+import './components/dw-event-add-remove.js'
+import './components/dw-scroll-top.js';

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo de vida</title>
+</head>
+<body>
+    
+    <script>
+
+class TestLifecycle extends HTMLElement {
+    constructor() {
+        super();
+        console.log('Soy el constructor');
+    }
+
+    connectedCallback() {
+        console.log('El elemento se ha insertado en el DOM');
+    }
+    disconnectedCallback() {
+        console.log('El elemento se ha retirado del DOM');
+    }
+
+    static get observedAttributes() { 
+        return ['dia']; 
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        console.log(`Ha cambiado el atributo ${name}, que tenía el valor ${oldValue} y pasa a tener el valor ${newValue}`);
+    }
+} 
+customElements.define('test-lifecycle', TestLifecycle);
+
+// Creamos un elemento
+var element = document.createElement('test-lifecycle');
+// Insertamos en el DOM
+document.body.appendChild(element);
+// Cambiamos un atributo que no existía antes
+element.setAttribute('dia', 'lunes');
+// Volvemos a cambiar el atributo
+element.setAttribute('dia', 'martes');
+// Eliminamos del DOM
+element.remove();
+    </script>
+
+</body>
+</html>
