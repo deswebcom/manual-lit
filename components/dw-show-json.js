@@ -27,7 +27,7 @@ export class DwShowJson extends LitElement {
                 @dw-collection-error="${this.onError}"
             ></dw-collection-service>
             <button @click=${this.showComments}>Recibe Comentarios</button>
-            <button @click=${this.showUsers}>Recibe Comentarios</button>
+            <button @click=${this.showUsers}>Recibe usuarios</button>
             <pre>${JSON.stringify(this.json)}</pre>
         `;
     }
