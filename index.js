@@ -14,3 +14,9 @@ import './components/dw-event-add-remove.js'
 import './components/dw-scroll-top.js';
 import './components/dw-input-checkbox.js';
 import './components/dw-counter-show5.js';
+import './components/dw-show-json.js';
+import './components/show-clock.js';
+
+
+setTimeout(() => console.log('uno'));
+console.log('dos');
